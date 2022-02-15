@@ -1,4 +1,4 @@
-# nutrient-recommendations
+# Nutrient Recommendations
 
 My web application will ask users to input their age and other relevant information and then show them their personalized nutritional intake recommendations. Many people are aware of dietary groups but do not have a concrete understanding of different nutrients and the key roles they play in the body’s function. In the process of collecting information and making this application, I hope to also become more knowledgeable about nutrition and web development.
 
