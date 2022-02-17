@@ -21,36 +21,6 @@ body {
     padding: 1rem;
 }
 
-/* left column */
-.left {
-    background-color: #FFBA08;
-    width: 25%;
-}
-
-/* grid layout used for middle column */
-.middle {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background-color: #FAA307;
-    width: 50%;
-}
-
-.calories {
-    grid-column: 1 / -1;
-}
-
-.macro {
-}
-
-.micro {
-}
-
-/* right column */
-.right {
-    background-color: #F48C06;
-    width: 25%;
-}
-
 .row:after {
     content: "";
     display: table;
@@ -60,8 +30,4 @@ body {
 h1 {
     font-size: 2rem;
     margin: 0 auto;
-}
-
-.left h2 {
-    padding: 0.5rem 0;
 }
