@@ -27,4 +27,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
 https://www.w3schools.com/CSSref/pr_class_display.asp
 https://youtu.be/9zBsdzdE4sM
 https://healthyweightlossperweek.org/knowledge-base/determining-the-thermic-effect-of-activity-tea/
+https://youtu.be/0ZJgIjIuY7U
+https://developer.mozilla.org/en-US/docs/Web/API/Response
+https://youtu.be/w7ejDZ8SWv8
+https://youtu.be/eao7ABGFUXs
+https://youtu.be/qdCHEUaFhBk
+https://www.w3schools.com/whatis/whatis_json.asp
+https://stackoverflow.com/questions/5173603/how-to-access-an-array-in-a-json-object
 */
