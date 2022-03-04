@@ -7,8 +7,8 @@ export default function NutrientInfo() {
   useEffect(() => {
     fetch("http://localhost:5000/macros")
       .then(response => response.json())
-      .then(macros => setText(macros[0].carbohydrates)); // hardcoded, update later
-  }, []);
+      .then(macronutrients => setText(macronutrients[0].carbohydrates)); // hardcoded, update later with nutrientText from Nutrient.js
+  }, [text]);
 
   return (
     <div className="column right">

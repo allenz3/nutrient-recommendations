@@ -2,9 +2,12 @@ import '../css/App.css';
 import UserInput from "./UserInput.js";
 import Recommendations from "./Recommendations.js";
 import NutrientInfo from "./NutrientInfo";
+import React, { useState, useEffect } from "react";
 
 function App() {
-  //UserInfo state
+  const [userInfo, setUserInfo] = useState(
+    {age:"20", gender:"Male", weight:"140"}
+  );
   //user input functions, pass into UserInput as prop
   //pass UserInfo into Recommendations as prop
   return (

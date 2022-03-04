@@ -1,4 +1,5 @@
 import '../css/Recommendations.css';
+import Nutrient from './Nutrient.js';
 
 export default function Recommendations() {
     return (
@@ -9,26 +10,26 @@ export default function Recommendations() {
         </div>
         <div className="macro">
           <h2>Macronutrients</h2>
-          <h3>Fat: 78 g</h3>
-          <h3>Saturated Fat: 20 g</h3>
-          <h3>Cholesterol: 300 mg</h3>
-          <h3>Total Carbohydrates: 275 mg</h3>
-          <h3>Sodium: 2,300 mg</h3>
-          <h3>Dietary Fiber: 28 g</h3>
-          <h3>Protein: 50 g</h3>
-          <h3>Added Sugars: 50 g</h3>
+          <Nutrient nutrient="Fat" value="78" unit="g" />
+          <Nutrient nutrient="Saturated Fat" value="20" unit="g" />
+          <Nutrient nutrient="Cholesterol" value="300" unit="mg" />
+          <Nutrient nutrient="Total Carbohydrates" value="275" unit="g" />
+          <Nutrient nutrient="Sodium" value="2,300" unit="mg" />
+          <Nutrient nutrient="Dietary Fiber" value="28" unit="g" />
+          <Nutrient nutrient="Protein" value="50" unit="g" />
+          <Nutrient nutrient="Added Sugars" value="50" unit="g" />
         </div>
         <div className="micro">
           <h2>Micronutrients</h2>
-          <h3>Vitamin A: 900 mcg</h3>
-          <h3>Vitamin C: 90 mg</h3>
-          <h3>Calcium: 1,300 mg</h3>
-          <h3>Iron: 18 mg</h3>
-          <h3>Vitamin D: 20 mcg</h3>
-          <h3>Vitamin E: 15 mg</h3>
-          <h3>Vitamin K: 120 mcg</h3>
-          <h3>Vitamin B6: 1.7 mg</h3>
-          <h3>Vitamin B12: 2.4 mcg</h3>
+          <Nutrient nutrient="Vitamin A" value="900" unit="mcg" />
+          <Nutrient nutrient="Vitamin C" value="90" unit="mg" />
+          <Nutrient nutrient="Calcium" value="1,300" unit="mg" />
+          <Nutrient nutrient="Iron" value="18" unit="mg" />
+          <Nutrient nutrient="Vitamin D" value="20" unit="mcg" />
+          <Nutrient nutrient="Vitamin E" value="15" unit="mg" />
+          <Nutrient nutrient="Vitamin K" value="120" unit="mcg" />
+          <Nutrient nutrient="Vitamin B6" value="1.7" unit="mg" />
+          <Nutrient nutrient="Vitamin B12" value="2.4" unit="mcg" />
         </div>
       </div>
     );
