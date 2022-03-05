@@ -13,27 +13,9 @@ export default function UserInput() {
 
             <h1>Input Your Biometrics!</h1>
 
-            <h2>What is your age?</h2>
-            <TextField id="outlined-basic" label="Years" variant="outlined" sx={{width: 1 / 4, mx: 1}} />
-            <TextField id="outlined-basic" label="Month" variant="outlined" sx={{width: 1 / 4, mx: 1}} />
-
-            <h2>What is your gender?</h2>
-            <FormControl sx={{ m: 1, minWidth: 110 }}>
-            <InputLabel id="demo-simple-select-label">Gender</InputLabel>
-            <Select
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
-                label="Gender"
-            >
-                <MenuItem value={"Male"}>Male</MenuItem>
-                <MenuItem value={"Female"}>Female</MenuItem>
-                <MenuItem value={"Non-Binary"}>Non-Binary</MenuItem>
-                <MenuItem value={"Other"}>Other</MenuItem>
-            </Select>
-            </FormControl>
-            
             <h2>What is your weight?</h2>
-            <TextField id="outlined-basic" label="Weight" variant="outlined" sx={{width: 1 / 4, mx: 1}} />
+            <TextField id="outlined-basic" label="Weight" variant="outlined" sx={{width: 1 / 2, mb: 3}} />
+            <br></br>
             <Button variant="contained" sx={{width: 1 / 4, m: 1}}>kg</Button>
             <Button variant="contained" sx={{width: 1 / 4, m: 1}}>lbs</Button>
             

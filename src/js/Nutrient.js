@@ -1,13 +1,7 @@
-export default function Nutrient(props) {
-
-    function nutrientText(e) {
-        console.log(e.target.innerHTML);
-        return e.target.innerHTML;
-    }
-
+export default function Nutrient({ onClick, nutrient, value, unit }) {
     return (
         <div>
-          <h3><span onClick={(e) => nutrientText(e)}>{props.nutrient}</span>: {props.value} {props.unit}</h3>
+          <h3><span onClick={onClick}>{nutrient}</span>: {value} {unit}</h3>
         </div>
     );
 }
