@@ -1,41 +1,47 @@
 {
     "nutrients": [
         {
-            "fat": {
-                "description": "Fat is found in food."
-            },
-            "saturated_fat": {
-                "description": "Saturated Fat usually comes in a solid form."
-            },
-            "cholesterol": { 
-                "description": "LDL and HDL"
-            },
-            "total_carbohydrates": {
+            "carbohydrates": {
                 "description": "Carbohydrates are the body’s main source of energy. There are two types of carbohydrates: simple carbohydrates and complex carbohydrates. Simple carbohydrates consist of simple sugars and are quickly processed by the body. Examples of foods that contain simple carbohydrates are sodas, syrups, and candy. Complex carbohydrates take longer to process and are digested slowly by the body. Examples of foods that contain complex carbohydrates are whole wheat bread, legumes, and brown rice. Complex carbohydrates should make up the majority of your diet. The average person should be consuming about 275 grams of total carbohydrates a day. This value will vary depending on many variables, such as age, gender, weight, and activity level."
             },
-            "sodium": { 
-                "description": "salt is needed"
-            },
-            "dietary_fiber": {
-                "description": "fiber is needed for a healthy diet"
+            "fat": {
+                "description": "Fat is found in food."
             },
             "protein": {
                 "description": "protein is good for your muscles"
             },
-            "added_sugars": {
-                "description": "try to avoid added sugars"
+            "dietary_fiber": {
+                "description": "fiber is needed for a healthy diet"
+            },
+            "water": {
+                "description": "Water is needed for all bodily functions"
+            },
+            "calcium": {
+                "description": "good for the bones"
+            },
+            "phosphorus": {
+                "description": "good for..."
+            },
+            "magnesium": {
+                "description": "good for..."
+            },
+            "sodium": {
+                "description": "salt is needed"
+            },
+            "potassium": {
+                "description": "good for..."
+            },
+            "iron": {
+                "description": "good for the blood"
+            },
+            "zinc": {
+                "description": "good for..."
             },
             "vitamin_a": {
                 "description": "good for the eyes"
             },
             "vitamin_c": {
                 "description": "good for the gums"
-            },
-            "calcium": {
-                "description": "good for the bones"
-            },
-            "iron": {
-                "description": "good for the blood"
             },
             "vitamin_d": {
                 "description": "good for the mood"
@@ -46,11 +52,32 @@
             "vitamin_k": {
                 "description": "good for..."
             },
+            "vitamin_b1": {
+                "description": "AKA Thiamin"
+            },
+            "vitamin_b2": {
+                "description": "AKA Riboflavin"
+            },
+            "vitamin_b3": {
+                "description": "AKA Niacin"
+            },
+            "vitamin_b5": {
+                "description": "AKA Pantothenic Acid"
+            },
             "vitamin_b6": {
-                "description": "good for..."
+                "description": "AKA Pyridoxine & Pyridoxamine"
+            },
+            "vitamin_b7": {
+                "description": "AKA Biotin"
+            },
+            "vitamin_b9": {
+                "description": "AKA Folate"
             },
             "vitamin_b12": {
-                "description": "found in red meat"
+                "description": "AKA Cobalamin, found in red meat"
+            },
+            "choline": {
+                "description": "good for..."
             }
         }
     ]

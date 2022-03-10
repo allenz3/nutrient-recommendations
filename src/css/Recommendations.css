@@ -1,7 +1,8 @@
 /* grid layout used for middle column */
 .middle {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 1fr 1fr;
     background-color: #FAA307;
     width: 50%;
 }

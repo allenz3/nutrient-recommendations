@@ -13,6 +13,7 @@ export default function NutrientInfo({ selectedNutrient }) {
   return (
     <div className="column right">
       <h1>Nutrient Info</h1>
+      <h2>Click on a nutrient to learn more about it!</h2>
       <p>{text}</p>
     </div>
   );
