@@ -45,7 +45,7 @@ function App() {
       fetch("https://allenz3.github.io/nutrient-recommendations/db.json")
       .then(response => response.json())
       .then(nutrients => {
-        const nutrientRangesByAge = nutrients[0][micro]["age"];
+        const nutrientRangesByAge = nutrients["nutrients"][0][micro]["age"];
         const ageRanges = Object.keys(nutrientRangesByAge);
         if (userInfo.age > 150) newMicros[micro] = nutrientRangesByAge[ageRanges[ageRanges.length - 1]];
         ageRanges.forEach((ageRange) => {
