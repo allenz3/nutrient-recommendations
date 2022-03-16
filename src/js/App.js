@@ -42,10 +42,10 @@ function App() {
   const calculateMicros = async () => { // calculates micronutrient intake based on age
     const newMicros = {calcium: 0, phosphorus: 0, magnesium: 0, sodium: 0, potassium: 0, chloride: 0, iron: 0, zinc: 0, vitamin_a: 0, vitamin_c: 0, vitamin_d: 0, vitamin_e: 0, vitamin_k: 0, vitamin_b1: 0, vitamin_b2: 0, vitamin_b3: 0, vitamin_b5: 0, vitamin_b6: 0, vitamin_b7: 0, vitamin_b9: 0, vitamin_b12: 0, choline: 0};
     Object.keys(newMicros).forEach((micro) => {
-      fetch("http://localhost:5000/nutrients")
+      fetch("https://allenz3.github.io/nutrient-recommendations/db.json")
       .then(response => response.json())
-      .then(micronutrients => {
-        const nutrientRangesByAge = micronutrients[0][micro]["age"];
+      .then(nutrients => {
+        const nutrientRangesByAge = nutrients[0][micro]["age"];
         const ageRanges = Object.keys(nutrientRangesByAge);
         if (userInfo.age > 150) newMicros[micro] = nutrientRangesByAge[ageRanges[ageRanges.length - 1]];
         ageRanges.forEach((ageRange) => {

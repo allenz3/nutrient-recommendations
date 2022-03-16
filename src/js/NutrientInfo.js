@@ -5,9 +5,9 @@ export default function NutrientInfo({ selectedNutrient }) {
   const [text, setText] = useState("");
 
   useEffect(() => {
-    fetch("http://localhost:5000/nutrients")
+    fetch("https://allenz3.github.io/nutrient-recommendations/db.json")
       .then(response => response.json())
-      .then(macronutrients => setText(macronutrients[0][selectedNutrient].description));
+      .then(nutrients => setText(nutrients["nutrients"][0][selectedNutrient].description));
   }, [selectedNutrient]);
 
   return (
