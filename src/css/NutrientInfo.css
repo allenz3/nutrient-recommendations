@@ -3,3 +3,7 @@
     background-color: #F48C06;
     width: 25%;
 }
+
+.disclaimer:hover {
+    text-decoration: underline;
+}

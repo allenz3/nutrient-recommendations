@@ -1,9 +1,18 @@
 /* left column */
 .left {
+    display: flex;
+    flex-direction: column;
     background-color: #FFBA08;
     width: 25%;
 }
 
+.left .flex-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .left h2 {
-    padding: 0.5rem 0;
+    padding: 1rem;
 }

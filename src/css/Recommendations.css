@@ -1,7 +1,7 @@
 /* grid layout used for middle column */
 .middle {
     display: grid;
-    grid-template-rows: 1fr 4fr;
+    grid-template-rows: 1fr 10fr;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: #FAA307;
     width: 50%;
@@ -19,4 +19,8 @@
 
 h3 span:hover {
     text-decoration: underline;
+}
+
+.disclaimer {
+    margin-top: 18rem;
 }

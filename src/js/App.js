@@ -5,13 +5,19 @@ import NutrientInfo from "./NutrientInfo";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  const [nutrient, setNutrient] = useState("");
-  const [userInfo, setUserInfo] = useState({weight: 0, height: 0, age: 0, activity_level: 0});
+  const [nutrient, setNutrient] = useState("disclaimer");
+  const [userInfo, setUserInfo] = useState({measure: "Metric", weight: 0, height: 0, age: 0, activity_level: 0});
   const [TDEE, setTDEE] = useState("2000");
   const [macros, setMacros] = useState({carb: 0, fat: 0, protein: 0});
+  const [micros, setMicros] = useState({calcium: 0, phosphorus: 0, magnesium: 0, sodium: 0, potassium: 0, chloride: 0, iron: 0, zinc: 0, vitamin_a: 0, vitamin_c: 0, vitamin_d: 0, vitamin_e: 0, vitamin_k: 0, vitamin_b1: 0, vitamin_b2: 0, vitamin_b3: 0, vitamin_b5: 0, vitamin_b6: 0, vitamin_b7: 0, vitamin_b9: 0, vitamin_b12: 0, choline: 0});
 
   function calculateTDEE () { // https://en.wikipedia.org/wiki/Harris%E2%80%93Benedict_equation
-    const bmr = 66 + (6.2 * userInfo.weight) + (12.7 * userInfo.height) - (6.76 * userInfo.age);
+    let bmr = 0;
+    if (userInfo.measure === "Metric") {
+      bmr = 66.5 + (13.76 * userInfo.weight) + (5.003 * userInfo.height) - (6.755 * userInfo.age);
+    } else if (userInfo.measure === "US Customary") {
+      bmr = 66 + (6.2 * userInfo.weight) + (12.7 * userInfo.height) - (6.76 * userInfo.age);
+    }
     const tdee = bmr * userInfo.activity_level;
     setTDEE(tdee);
   }
@@ -20,8 +26,8 @@ function App() {
     setNutrient(e.target.innerHTML.toLowerCase().split(' ').join('_'));
   }
 
-  const update = (weight, height, age, activityLevel) => { // updates userInfo with new values when the "Calculate" button is pressed
-    const newInfo = {weight: weight, height: height, age: age, activity_level: activityLevel};
+  const update = (measure, weight, height, age, activityLevel) => { // updates userInfo with new values when the "Calculate" button is pressed
+    const newInfo = {measure: measure, weight: weight, height: height, age: Math.round(age), activity_level: activityLevel};
     setUserInfo(newInfo);
   }
 
@@ -33,6 +39,32 @@ function App() {
     setMacros(newMacros);
   }
 
+  const calculateMicros = async () => { // calculates micronutrient intake based on age
+    const newMicros = {calcium: 0, phosphorus: 0, magnesium: 0, sodium: 0, potassium: 0, chloride: 0, iron: 0, zinc: 0, vitamin_a: 0, vitamin_c: 0, vitamin_d: 0, vitamin_e: 0, vitamin_k: 0, vitamin_b1: 0, vitamin_b2: 0, vitamin_b3: 0, vitamin_b5: 0, vitamin_b6: 0, vitamin_b7: 0, vitamin_b9: 0, vitamin_b12: 0, choline: 0};
+    Object.keys(newMicros).forEach((micro) => {
+      fetch("http://localhost:5000/nutrients")
+      .then(response => response.json())
+      .then(micronutrients => {
+        const nutrientRangesByAge = micronutrients[0][micro]["age"];
+        const ageRanges = Object.keys(nutrientRangesByAge);
+        if (userInfo.age > 150) newMicros[micro] = nutrientRangesByAge[ageRanges[ageRanges.length - 1]];
+        ageRanges.forEach((ageRange) => {
+          const ages = ageRange.split("-");
+          for(let i = parseInt(ages[0]); i <= parseInt(ages[1]); i++) {
+            if (i === userInfo.age) {
+              if (micro === "calcium" || micro === "magnesium" || micro === "sodium" || micro === "chloride" || micro === "potassium") {
+                newMicros[micro] = userInfo.activity_level * nutrientRangesByAge[ageRange];
+              } else {
+                newMicros[micro] = nutrientRangesByAge[ageRange];
+              }
+            }
+          }
+        });
+        if(micro === "choline") setMicros(newMicros);
+      });
+    });
+  }
+
   // runs calculate functions after hitting the calculate button
   useEffect(() => { 
     calculateTDEE();
@@ -42,13 +74,17 @@ function App() {
     calculateMacros();
   }, [TDEE]);
 
+  useEffect(() => { 
+    calculateMicros();
+  }, [TDEE]);
+
   //user input functions, pass into UserInput as prop
   //pass UserInfo into Recommendations as prop
   return (
     <div className="row">
       <UserInput update={update} />
-      <Recommendations TDEE={TDEE} macros={macros} onClick={selectNutrient} />
-      <NutrientInfo selectedNutrient={nutrient} /> 
+      <Recommendations TDEE={TDEE} macros={macros} micros={micros} onClick={selectNutrient} activityLevel={userInfo.activity_level} />
+      <NutrientInfo selectedNutrient={nutrient} selectNutrient={selectNutrient} /> 
     </div>
   );
 }

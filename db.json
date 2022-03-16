@@ -1,83 +1,309 @@
 {
     "nutrients": [
         {
+            "disclaimer": {
+                "description": "DISCLAIMER: Not professional medical advice. A person's nutrient intake needs are often very individualized and specific to their own needs. Nutrient recommendations should only be viewed as a suggested estimate. Please contact a doctor or nutritionist for any outstanding inquiries. Expectant mothers need extra folate and choline. Athletes need extra calories and electrolytes to make up for bodily losses during exercise. People with chronic or acute illnesses will have specialized nutritional needs."
+            },
             "carbohydrates": {
                 "description": "Carbohydrates are the body’s main source of energy. There are two types of carbohydrates: simple carbohydrates and complex carbohydrates. Simple carbohydrates consist of simple sugars and are quickly processed by the body. Examples of foods that contain simple carbohydrates are sodas, syrups, and candy. Complex carbohydrates take longer to process and are digested slowly by the body. Examples of foods that contain complex carbohydrates are whole wheat bread, legumes, and brown rice. Complex carbohydrates should make up the majority of your diet. The average person should be consuming about 275 grams of total carbohydrates a day. This value will vary depending on many variables, such as age, gender, weight, and activity level."
             },
             "fat": {
-                "description": "Fat is found in food."
+                "description": "Fat is one of the main sources of energy for humans. Fat is required for bodily functions, like energy storage and insulation. There are different types of fat, such as unsaturated fats, saturated fats, and trans fats."
             },
             "protein": {
-                "description": "protein is good for your muscles"
+                "description": "Proteins are one of the main sources of energy for humans. Proteins are made out of long amino acid chains. Proteins are used for many bodily functions, such as building muscle and repairing cells. Meat has a lot of protein. Combining foods with complementary amino acids, such as rice and beans, can also be a good source of protein."
             },
             "dietary_fiber": {
-                "description": "fiber is needed for a healthy diet"
+                "description": "Dietary fiber is the part of a plant-based food that cannot be broken down by the digestive system. Dietary fiber can be soluble or insoluble. Soluble fiber is found in many cereal crops and can help lower LDL cholesterol levels. Insoluble fibers are found in many fruits and helps the digestive system pass bowels."
             },
             "water": {
-                "description": "Water is needed for all bodily functions"
+                "description": "Water is required for almost all bodily functions. Water makes up around 2/3rds of the human body. The amount of water needed depends on a lot of different factors, such as physical activity level, temperature, humidity, etc. Many foods and other beverages also have water in them. A lack of water can lead to dehydration, and excess water intake can lead to water intoxication."
             },
             "calcium": {
-                "description": "good for the bones"
+                "description": "Calcium is an electrolyte that helps run muscular, circulatory, and digestive functions. Calcium is also needed to build bone cells and blood cells. Dairy foods, such as milk, yogurt, and cheese, are rich in calcium. Non-dairy sources of calcium include salmon, kale, and oranges.",
+                "age": {
+                    "1-3": 700,
+                    "4-8": 1000,
+                    "9-13": 1300,
+                    "14-18": 1300,
+                    "19-30": 1000,
+                    "31-50": 1000,
+                    "51-70": 1000,
+                    "70-150": 1200
+                }
             },
             "phosphorus": {
-                "description": "good for..."
+                "description": "Phosphorus makes up the structural framework of DNA. Phosphate transports energy with ATP. Phospholipids make up cell membranes. Calcium phosphate also stiffens bones. Many sources of protein, such as milk and meat, also contain phosphorus.",
+                "age": {
+                    "1-3": 460,
+                    "4-8": 500,
+                    "9-13": 1250,
+                    "14-18": 1250,
+                    "19-30": 700,
+                    "31-50": 700,
+                    "51-70": 700,
+                    "70-150": 700
+                }
             },
             "magnesium": {
-                "description": "good for..."
+                "description": "Magnesium is in every cell of the human body. Magnesium is also needed for various chemical reactions in the body. Green leafy vegetables, such as spinach, contain magnesium.",
+                "age": {
+                    "1-3": 80,
+                    "4-8": 130,
+                    "9-13": 240,
+                    "14-18": 410,
+                    "19-30": 400,
+                    "31-50": 420,
+                    "51-70": 420,
+                    "70-150": 420
+                }
             },
             "sodium": {
-                "description": "salt is needed"
+                "description": "Sodium is an electrolyte that regulates blood functions and bodily equilibrium. Salt is the main source of sodium for most humans and is used as a seasoning for many foods. High amounts of sodium intake can lead to high blood pressure and other diseases.",
+                "age": {
+                    "1-3": 800,
+                    "4-8": 1000,
+                    "9-13": 1200,
+                    "14-18": 1500,
+                    "19-30": 1500,
+                    "31-50": 1500,
+                    "51-70": 1500,
+                    "70-150": 1500
+                }
             },
             "potassium": {
-                "description": "good for..."
+                "description": "Potassium is an electrolyte that influences many bodily functions, such as energy release in cells, hormone secretion, blood circulation, and more. Potassium is found in all fruits, vegetables, and meat.",
+                "age": {
+                    "1-3": 2000,
+                    "4-8": 2300,
+                    "9-13": 2500,
+                    "14-18": 3000,
+                    "19-30": 3400,
+                    "31-50": 3400,
+                    "51-70": 3400,
+                    "70-150": 3400
+                }
+            },
+            "chloride": {
+                "description": "Chloride is needed to regulate osmotic pressure in human bodies and is found in salt.",
+                "age": {
+                    "1-3": 1.5,
+                    "4-8": 1.9,
+                    "9-13": 2.3,
+                    "14-18": 2.3,
+                    "19-30": 2.3,
+                    "31-50": 2.3,
+                    "51-70": 2.0,
+                    "70-150": 1.8
+                }
             },
             "iron": {
-                "description": "good for the blood"
+                "description": "Iron is essential for transporting, storing, and using oxygen, particularly in blood. Iron is found in red meat and other major sources of protein. Iron deficiency causes anemia, while iron excess can lead to intoxication and death.",
+                "age": {
+                    "1-3": 7,
+                    "4-8": 10,
+                    "9-13": 8,
+                    "14-18": 11,
+                    "19-30": 8,
+                    "31-50": 8,
+                    "51-70": 8,
+                    "70-150": 8
+                }
             },
             "zinc": {
-                "description": "good for..."
+                "description": "Zinc enables enzyme function in humans and many other bodily functions. Zinc is found in meats and dairy. Zinc deficiency makes a person more susceptible to chronic diseases.",
+                "age": {
+                    "1-3": 3,
+                    "4-8": 5,
+                    "9-13": 8,
+                    "14-18": 11,
+                    "19-30": 11,
+                    "31-50": 11,
+                    "51-70": 11,
+                    "70-150": 11
+                }
             },
             "vitamin_a": {
-                "description": "good for the eyes"
+                "description": "Vitamin A is a fat-soluble vitamin that is essential for human vision. Vitamin A is found in animal liver, and plant foods that are colored red, orange, or yellow, such as carrots. Vitamin A deficiency leads to night blindness, while Vitamin A excess leads to hypervitaminosis.",
+                "age": {
+                    "1-3": 300,
+                    "4-8": 400,
+                    "9-13": 600,
+                    "14-18": 900,
+                    "19-30": 900,
+                    "31-50": 900,
+                    "51-70": 900,
+                    "70-150": 900
+                }
             },
             "vitamin_c": {
-                "description": "good for the gums"
+                "description": "Vitamin C is a water-soluble vitamin that enables the body to effectively create collagen and heal wounds. Vitamin C is found in many fruits and vegetables, such as citruses, and is commonly sold as a supplement. Vitamin C deficiency leads to scurvy.",
+                "age": {
+                    "1-3": 15,
+                    "4-8": 25,
+                    "9-13": 45,
+                    "14-18": 75,
+                    "19-30": 90,
+                    "31-50": 90,
+                    "51-70": 90,
+                    "70-150": 90
+                }
             },
             "vitamin_d": {
-                "description": "good for the mood"
+                "description": "Vitamin D is a fat-soluble vitamin that improves digestive absorption of calcium. Vitamin D is found in some foods, such as eggs and salmon. Vitamin D is typically added as a fortification in processed foods. The body can also naturally generate Vitamin D from exposure to sunlight. Vitamin D deficiency leads to rickets and osteoporosis.",
+                "age": {
+                    "1-3": 15,
+                    "4-8": 15,
+                    "9-13": 15,
+                    "14-18": 15,
+                    "19-30": 15,
+                    "31-50": 15,
+                    "51-70": 15,
+                    "70-150": 20
+                }
             },
             "vitamin_e": {
-                "description": "good for perserving food"
+                "description": "Vitamin E is a fat-soluble vitamin that reduces the number of free radicals in the body, subsequently reducing one's risk of getting cancer. Vitamin E is found in various oils, meats, and fortified foods.",
+                "age": {
+                    "1-3": 6,
+                    "4-8": 7,
+                    "9-13": 11,
+                    "14-18": 15,
+                    "19-30": 15,
+                    "31-50": 15,
+                    "51-70": 15,
+                    "70-150": 15
+                }
             },
             "vitamin_k": {
-                "description": "good for..."
+                "description": "Vitamin K is a fat-soluble vitamin that helps process proteins and coagulate blood. Vitamin K is found commonly in leafy green vegetables, such as collard greens. Vitamin K deficiency is rare but can causes issues with blood clotting.",
+                "age": {
+                    "1-3": 30,
+                    "4-8": 55,
+                    "9-13": 60,
+                    "14-18": 75,
+                    "19-30": 120,
+                    "31-50": 120,
+                    "51-70": 120,
+                    "70-150": 120
+                }
             },
             "vitamin_b1": {
-                "description": "AKA Thiamin"
+                "description": "Vitamin B1, AKA Thiamin, is a water-soluble vitamin that is an important part of many cellular processes. Vitamin B1 is found in whole grains, legumes, and fortified foods. Vitamin B1 deficiency leads to beriberi.",
+                "age": {
+                    "1-3": 0.5,
+                    "4-8": 0.6,
+                    "9-13": 0.9,
+                    "14-18": 1.2,
+                    "19-30": 1.2,
+                    "31-50": 1.2,
+                    "51-70": 1.2,
+                    "70-150": 1.2
+                }
             },
             "vitamin_b2": {
-                "description": "AKA Riboflavin"
+                "description": "Vitamin B2, AKA Riboflavin, is a water-soluble vitamin that is needed for metabolism, cell function, antibody production, and more. Foods that contain Vitamin B2 include liver, meat, dairy, and fortified foods. Vitamin B2 deficiency is rare but can lead to stomatitis.",
+                "age": {
+                    "1-3": 0.5,
+                    "4-8": 0.6,
+                    "9-13": 0.9,
+                    "14-18": 1.3,
+                    "19-30": 1.3,
+                    "31-50": 1.3,
+                    "51-70": 1.3,
+                    "70-150": 1.3
+                }
             },
             "vitamin_b3": {
-                "description": "AKA Niacin"
+                "description": "Vitamin B3, AKA Niacin, is a water-soluble vitamin that is essential for enzyme production. Vitamin B3 is found in meat, seafood, and fortified foods. Vitamin B3 deficiency leads to pellagra.",
+                "age": {
+                    "1-3": 6,
+                    "4-8": 8,
+                    "9-13": 12,
+                    "14-18": 16,
+                    "19-30": 16,
+                    "31-50": 16,
+                    "51-70": 16,
+                    "70-150": 16
+                }
             },
             "vitamin_b5": {
-                "description": "AKA Pantothenic Acid"
+                "description": "Vitamin B5, AKA Pantothenic Acid, is a water-soluble vitamin that is responsible for enzyme synthesis. Foods such as dairy, eggs, potatoes, and tomatoes are good sources of Vitamin B5. Vitamin B5 deficiency is very rare.",
+                "age": {
+                    "1-3": 2,
+                    "4-8": 3,
+                    "9-13": 4,
+                    "14-18": 5,
+                    "19-30": 5,
+                    "31-50": 5,
+                    "51-70": 5,
+                    "70-150": 5
+                }
             },
             "vitamin_b6": {
-                "description": "AKA Pyridoxine & Pyridoxamine"
+                "description": "Vitamin B6, AKA Pyridoxine & Pyridoxamine, is a water-soluble vitamin that is responsible for metabolism, various forms of synthesis, and gene expression. Vitamin B6 is found in meats, seafood, fruits and vegetables, and fortified foods. Vitamin B6 deficiency leads to discoloration of the skin, ulcers, and neurological dysfunction.",
+                "age": {
+                    "1-3": 0.5,
+                    "4-8": 0.6,
+                    "9-13": 1.0,
+                    "14-18": 1.3,
+                    "19-30": 1.3,
+                    "31-50": 1.3,
+                    "51-70": 1.7,
+                    "70-150": 1.7
+                }
             },
             "vitamin_b7": {
-                "description": "AKA Biotin"
+                "description": "Vitamin B7, AKA Biotin, is a water-soluble vitamin that helps metabolize macronutrients (fats, carbohydrates, proteins). Vitamin B7 is commonly found in liver, eggs, red meat, nuts, and dairy. Vitamin B7 deficiency is rare.",
+                "age": {
+                    "1-3": 8,
+                    "4-8": 12,
+                    "9-13": 20,
+                    "14-18": 25,
+                    "19-30": 30,
+                    "31-50": 30,
+                    "51-70": 30,
+                    "70-150": 30
+                }
             },
             "vitamin_b9": {
-                "description": "AKA Folate"
+                "description": "Vitamin B9, AKA Folate, is a water-soluble vitamin that humans need to make DNA and RNA and metabolize amino acids for mitosis. Vitamin B9 is found in nuts, seeds, legumes, vegetables, liver, meat, dairy, and supplements. Vitamin B9 consumption is especially important during pregnancy. Vitamin B9 deficiency leads to birth defects, heart disease, stroke, cancer, and neurological dysfunction. Vitamin B9 toxicity from overconsumption is rare.",
+                "age": {
+                    "1-3": 150,
+                    "4-8": 200,
+                    "9-13": 300,
+                    "14-18": 400,
+                    "19-30": 400,
+                    "31-50": 400,
+                    "51-70": 400,
+                    "70-150": 400
+                }
             },
             "vitamin_b12": {
-                "description": "AKA Cobalamin, found in red meat"
+                "description": "Vitamin B12, AKA Cobalamin, is a water-soluble vitamin that is required for DNA synthesis. Vitamin B12 is also needed for nervous system function and circulatory system function. Vitamin B12 is found in red meats, dairy, eggs, and other animal products. Vitamin B12 is also found in supplements and fortified foods. Since Vitamin B12 is not found frequently in plant-based foods, vegetarians and vegans should take B12 supplements to support their nutritional needs. Vitamin B12 deficiency leads to nervous system damage, anemia, GI problems, and more.",
+                "age": {
+                    "1-3": 0.9,
+                    "4-8": 1.2,
+                    "9-13": 1.8,
+                    "14-18": 2.4,
+                    "19-30": 2.4,
+                    "31-50": 2.4,
+                    "51-70": 2.4,
+                    "70-150": 2.4
+                }
             },
             "choline": {
-                "description": "good for..."
+                "description": "Choline is a nutrient that is needed for cell and signal molecule synthesis. Choline is found in meats, dairy, vegetables, grains, and fruits. Choline is in high demand in pregnant humans and is needed for optimal fetal health. Excess choline intake can lead to low blood pressure, nausea, diarrhea, and unpleasant bodily odors.",
+                "age": {
+                    "1-3": 200,
+                    "4-8": 250,
+                    "9-13": 375,
+                    "14-18": 550,
+                    "19-30": 550,
+                    "31-50": 550,
+                    "51-70": 550,
+                    "70-150": 550
+                }
             }
         }
     ]
